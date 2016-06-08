@@ -1,0 +1,35 @@
+extends layouts/layout
+
+block vars
+  -title = 'Search-result'
+  -bodyClass = 'page-search-page'
+  -menuIndex = 0
+
+block container
+  main
+    include blocks/form-search
+    .grid-fluid.search-resutl
+      .outer
+        .block-1
+            h1.title.title-search Søgeresultater
+            .row.inner
+              .col-sm-12
+                .sort-desc
+                  p "Mobberi"
+        - for(i=0; i<3; i++){
+          .block-1
+            h1.title: +link('Hvad er fri for mobberi', 'javascript:;')
+            .row.inner
+              .col-sm-12
+                .sort-desc
+                   p ... Fri for Mobberi i andre lande Interessen for Fri for Mobberi i udlandet er stor, og flere lande har implementeret det danske ...
+        - }
+        .item-list
+          ul.pager
+            li.pager-item.pager-current.first 1
+            li.pager-item
+              +link('Go to page 2', '', '2')
+            li.pager-next
+              +link('Go to next page', '', 'next ›')
+            li.pager-last.last
+              +link('Go to last page', '', 'last »')

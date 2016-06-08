@@ -1,0 +1,26 @@
+extends layouts/layout
+
+block vars
+  -title = 'Subpage Listview'
+  -bodyClass = 'subpage-listview'
+  -menuIndex = 5
+
+block container
+  main
+    include blocks/form-search
+    .grid-fluid
+      .outer
+        .block-1
+          h1.title Listevisning introduktion
+          .row.inner
+            .col-sm-8: .content.editor-1
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt ab, possimus asperiores, explicabo nemo sit iste. Aliquid, voluptatem atque magni. Reiciendis deleniti numquam illo excepturi sed aliquid quam illum doloribus.
+        .download-block
+          .block-2
+            h2.title Download til skoler
+            .row.inner
+              +media-list([{title_img:'Img Download', text_img: '', title_heading: 'NAVN', desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', title: 'Donec ipsum', linkClass: 'link-1'}, {title_img:'Img Download', text_img: '', title_heading: 'NAVN', desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', title: 'Donec ipsum', linkClass: 'link-1'}, {nameClass: 'hidden-sm hidden-xs', title_img:'Img Download', text_img: '', title_heading: 'NAVN', desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', title: 'Donec ipsum', linkClass: 'link-1'}])
+          .block-2
+            h2.title Download til Daginstitutioner
+            .row.inner
+              +media-list([{title_img:'Img Download', text_img: '', title_heading: 'NAVN', desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', title: 'Donec ipsum', linkClass: 'link-1'}, {title_img:'Img Download', text_img: '', title_heading: 'NAVN', desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', title: 'Donec ipsum', linkClass: 'link-1'}, {nameClass: 'hidden-sm hidden-xs', title_img:'Img Download', text_img: '', title_heading: 'NAVN', desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', title: 'Donec ipsum', linkClass: 'link-1'}])

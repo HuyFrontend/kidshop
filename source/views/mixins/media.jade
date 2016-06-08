@@ -1,0 +1,13 @@
+mixin media-list(ObjMedia)
+  - each item in ObjMedia
+    - if (typeof(item.alt) === 'undefined') item.alt = item.title_img
+    .col-sm-6.col-md-4.media-item(class=item.nameClass)
+      .media-left
+        +link(item.title_img, item.href_img, item.text_img)(class=item.linkImgclass)
+          +img(item.alt, item.src)
+      .media-body
+        h3.title.font-size-1
+          +link(item.title_heading, item.href_heading, item.text_heading)(class=item.linkHeadclass)
+            !=item.title_heading
+        p!=item.desc
+        +link(item.title, item.href, item.text)(class=item.linkClass)

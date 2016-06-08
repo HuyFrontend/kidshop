@@ -1,0 +1,52 @@
+extends layouts/layout
+
+block vars
+  -title = 'Subpage'
+  -bodyClass = 'subpage-open'
+  -menuIndex = 0
+
+block container
+  main(data-accordion)
+    include blocks/form-search
+    .grid-fluid
+      .outer
+        - for(i=0; i<4; i++){
+          .block-1
+            h2.title: +link('Hvad er fri for mobberi', 'javascript:;')
+            .row.inner
+              .col-sm-8(data-hidden): .content
+                .sort-desc
+                  p Mobning er mest udbredt i 4.-7. klasse, men kimen lægges allerede i børnehaven. Derfor fokuserer antimobbeprogrammet Fri for Mobberi på de 3-8-årige.
+                  +link('Download psd')
+              .wrap.hidden
+                .col-sm-8: .content
+                  .editor-1
+                    p Mobning er mest udbredt i 4.-7. klasse, men kimen lægges allerede i børnehaven. Derfor fokuserer antimobbeprogrammet Fri for Mobberi på de 3-8-årige.
+                    p Mary Fonden og Red Barnet har udviklet programmet efter initiativ fra H.K.H. Kronprinsesse Mary. Inspirationen kommer fra 
+                      +link('The Alannah and Madeline Foundations')
+                      |  arbejde mod mobning i Australien. Fri for Mobberi støttes af Ole Kirk's Fond.
+                    p Fri for Mobberi og dets særlige tilgang til mobning har vakt genklang internationalt og 
+                      +link('flere andre lande arbejder med en oversat version')
+                      |  af antimobbeprogrammet.
+                    p Forskningen og de positive tilbagemeldinger taler deres tydelige sprog: Mange oplever mere omsorgsfulde børn som resultat af Fri for Mobberis fokus på, hvordan vi værner om de gode børnefællesskaber, der er så vigtige.
+                    p Fri for Mobberi henvender sig til:
+                    ul
+                      li Børn i børnehaver og 0.- 2. klasse
+                      li Deres forældre
+                      li Fagfolk, der arbejder med børn i børnehave og indskoling
+                    p Programmet lægger vægt på børns medbestemmelse, samarbejde med forældre og pædagogen og læreren som nøglepersoner.
+                    p Fri for Mobberi består af en kuffert med pædagogiske redskaber som fx samtaletavler, massage, rytmik og bøger. Med kufferten følger et obligatorisk instruktørkursus. Kufferten bestilles på vores webshop. Desuden består Fri for Mobberi af Fri for Mobberi Universet; et digitalt univers udviklet primært til indskolingen, hvor centrale elementer i Fri for Mobberi er udviklet til brug på iPads og smartboards. Man køber det digitale materiale separat.
+                .col-sm-4: .sidebar
+                  +link('images','javascript:;')(data-img-src='images/upload/photo-m-4.jpg', data-show-popup="")
+                    .item: +img("photo-8","images/upload/photo-8.jpg")
+                  +link('video')(data-video-src ='http://player.vimeo.com/video/39683393?api=1&player_id=player_1', data-show-popup="")
+                    .item.video-icon: +img("photo-8","images/upload/video-photo.jpg")
+                  +link('video')(data-video-src =' http://player.vimeo.com/video/131892249?api=1&player_id=player_1',data-show-popup="")
+                    .item.video-icon: +img("photo-8","images/upload/video-photo.jpg")
+                .col-sm-12: include blocks/carousel
+                +link('Download psd').link-download
+              .col-sm-4: +link('Læs mere', 'javascript:;', '')(data-button = 'Læs mere', data-button-active = 'læs mindre').btn-1.viewmore-btn
+        - }
+block popup
+  .overlay
+  include blocks/popup

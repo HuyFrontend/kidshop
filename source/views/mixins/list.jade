@@ -1,0 +1,11 @@
+mixin list-link(objLinks)
+  ul&attributes(attributes)
+    - each item in objLinks
+      li(class=item.activeClass): +link(item.title, item.href, item.text, item.target)(class=item.nameclass)
+
+mixin list-img-link(objImgLinks)
+  ul&attributes(attributes)
+    - each item in objImgLinks
+      li
+        +link(item.title, item.href, item.text)
+          +img(item.alt, item.src)

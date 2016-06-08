@@ -1,0 +1,19 @@
+extends layouts/layout
+
+block vars
+  -title = 'shop'
+  -bodyClass = 'shop'
+  -menuIndex = 6
+
+block container
+  main
+    include blocks/form-search
+    .shop-block
+      .grid-fluid
+        .outer
+          .block-1
+            h1.title Listevisning introduktion
+            .row.inner
+              .col-sm-8: .content.editor-1
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt ab, possimus asperiores, explicabo nemo sit iste. Aliquid, voluptatem atque magni. Reiciendis deleniti numquam illo excepturi sed aliquid quam illum doloribus.
+          +img-link({title: 'images shop', src: 'images/upload/photo-1.jpg', alt: 'images shop', target: '_blank', nameclass: 'img-link'})

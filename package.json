@@ -1,0 +1,48 @@
+{
+  "name": "Frontend",
+  "description": "Frontend template",
+  "version": "0.1.0",
+  "main": "Gruntfile.js",
+  "repository": {
+    "type": "git",
+    "url": "git@git.sutrix.com:len.nguyen/frontend-template.git"
+  },
+  "engines": {
+    "node": "~0.10.x",
+    "npm": "~2.11.x"
+  },
+  "dependencies": {
+    "express": "~4.12.4",
+    "body-parser": "~1.12.4",
+    "method-override": "~2.3.3",
+    "morgan": "~1.5.3",
+    "jade": "~1.10.0",
+    "less": "~2.5.1",
+    "grunt-cli": "~0.1.13"
+  },
+  "devDependencies": {
+    "grunt-concurrent": "~1.0.0",
+    "grunt-contrib-clean": "~0.6.0",
+    "grunt-contrib-concat": "0.5.1",
+    "grunt-contrib-connect": "~0.10.1",
+    "grunt-contrib-copy": "~0.8.0",
+    "grunt-contrib-csslint": "~0.4.0",
+    "grunt-contrib-cssmin": "~0.12.3",
+    "grunt-contrib-htmlmin": "~0.4.0",
+    "grunt-contrib-imagemin": "~0.9.4",
+    "grunt-contrib-jade": "~0.14.1",
+    "grunt-contrib-jshint": "~0.11.2",
+    "grunt-contrib-less": "~1.0.1",
+    "grunt-contrib-qunit": "~0.7.0",
+    "grunt-contrib-uglify": "~0.9.1",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-autoprefixer": "~3.0.0",
+    "grunt-markdown-pdf": "~3.0.0",
+    "grunt-htmlhint": "~0.4.1",
+    "grunt-nodemon": "~0.4.0",
+    "time-grunt": "~1.2.1"
+  },
+  "keywords": [
+    "Frontend template"
+  ]
+}

@@ -1,0 +1,22 @@
+mixin button(type, value, name, id, title)
+  - if (typeof(title) === 'undefined') title = value
+  button(type=type, name=name, id=id?id:name, title=title)&attributes(attributes)!= value
+
+mixin button-1(obj)
+  - if (typeof(obj.text)=== 'undefined') obj.text = obj.title
+    button(type=obj.typebtn, id=obj.name, name=obj.name, title=obj.title)&attributes(attributes)!=obj.text
+      if block
+        block
+
+mixin input(type, name, value, id, attr)
+  input(type=type, name=name, id=id?id:name, value=value)&attributes(attr?attr:attributes)
+
+mixin label(text, sup, id, icon)
+  label(for=id)&attributes(attributes)
+    - if(typeof(icon)!=='undefined'){
+    i(class=icon)
+    - }
+    !=text
+    - if(typeof(sup)!=='undefined'){
+    sup.require!=sup
+    - }

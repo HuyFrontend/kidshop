@@ -1,0 +1,34 @@
+footer
+  .subscribe-block
+    .grid-fluid
+      .inner
+          span.label-1.font-size-1 Tilmeld Vores Nyhedsbrev
+          +link('Læs mere').small-text
+      form(id='form-1', method='get', action='/submit-email', data-validate='', data-ajax-submit='', data-loading='.subscribe-block .loading').form-1
+          .form-group
+            +input('email', 'submitted[e_mail]', '', 'email', {placeholder: 'Din e-mail adresse', class: 'input-1 text-input', 'required': '', 'data-placeholder': '', 'data-email': ''})
+            +input('submit', 'send', 'Send', '').input-1.btn-1.send-btn
+    .loading.hidden
+      +img('Loading', 'images/loading.gif')
+  .contact-block
+    .grid-fluid
+      .row
+        .col-sm-6
+          .contact-info-block.editor-2
+            p Fri For Mobberi
+            p Amaliegade 8 B
+              br
+              | DK-1256 København K.
+            p
+              span Tlf.:
+              +link('45 27 30 20', 'tel:45273020')
+              br
+              span Mail:
+              +link('Info@Maryfonden.dk', 'mailto:info@Maryfonden.dk')
+        .col-sm-6
+          ul.social-list
+            li: +img-link({title: 'Facebook', src: 'images/icon-facebook.png', alt: 'Facebook',  target: '_blank', nameclass: 'facebook'})
+            li: +img-link({title: 'Twitter', src: 'images/icon-twitter.png', alt: 'Twitter', target: '_blank', nameclass: 'twitter'})
+  .partner-list
+    +img-link({title: 'Mary Fonden', src: 'images/logo-mary.png', alt: 'Mary Fonden', nameclass: 'logo-partner', target: '_blank'})
+    +img-link({title: 'Red Barnet', src: 'images/logo-red-barnet.png', alt: 'Red Barnet', nameclass: 'logo-partner', target: '_blank'})

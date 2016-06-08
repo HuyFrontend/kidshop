@@ -1,0 +1,8 @@
+.form-search
+  form(id="form-2", method="get", action="/search-result.html")
+    .grid-fluid
+      .row
+        .col-xs-9.col-sm-10.col-md-11
+          +input('text', 'key-search', '', 'keySearch', {placeholder: 'Søg efter f.eks. emner, personer eller nøgleord', class: 'input-1 text-input', 'data-placeholder': ''})
+        .col-xs-3.col-sm-2.col-md-1
+          +input('submit', 'søg', 'søg').input-1.btn-1.send-btn

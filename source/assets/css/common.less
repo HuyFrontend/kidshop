@@ -1,0 +1,150 @@
+// Common
+html {font-size: @font-size-base;}
+input:focus {outline: 0;}
+// a, button, input[type="submit"] {
+//   .transition(.5s);
+// }
+// .no-touch {
+//   a:hover, button:hover, input[type="submit"]:hover {opacity: .8;}
+// }
+// .no-touch {
+//   a:hover{.scale(.98);}
+// }
+button {
+  border: 0;
+  cursor: pointer;
+}
+p, li, .link-1 {font-size: 1rem;}
+p, li {line-height: 1.3;}
+img {
+  display: block;
+  max-width: 100%;
+}
+.line-1 {
+  height: 8px;
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y2ZjZmNiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZWZlZmUiIHN0b3Atb3BhY2l0eT0iMCIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top,  rgba(246,246,246,1) 0%, rgba(254,254,254,0) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(246,246,246,1)), color-stop(100%,rgba(254,254,254,0))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(246,246,246,1) 0%,rgba(254,254,254,0) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(246,246,246,1) 0%,rgba(254,254,254,0) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(246,246,246,1) 0%,rgba(254,254,254,0) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(246,246,246,1) 0%,rgba(254,254,254,0) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f6f6', endColorstr='#00fefefe',GradientType=0 ); /* IE6-8 */
+}
+.loading {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: @white;
+  opacity: .8;
+  z-index: 2;
+  text-align: center;
+  img {
+    position: absolute;
+    top: 50%;
+    margin-top: -12px;
+    left: 50%;
+    margin-left: -12px;
+  }
+}
+.form-group {position: relative;}
+.error-txt, .success-status, .error-status {
+  position: absolute;
+  left: 10px;
+  bottom: -17px;
+  color: @white;
+}
+.font-size-1 {font-size: 1.4em;}
+.font-size-2 {font-size: 0.9rem;}
+.btn-1 {
+  border-radius: 50px;
+  color: white;
+  text-transform: uppercase;
+  font-family: @font-gill-sans;
+}
+.title {
+  color: @blue;
+  text-transform: uppercase;
+  font-family: @font-gill-sans;
+  font-weight: normal;
+  a {
+    color: @blue;
+    word-wrap: break-word;
+  }
+}
+.title-2 {font-size: 1.8rem;}
+.link-1 {
+  display: inline-block;
+  color: @pink-1;
+  &:link, &:hover, &:visited {color: @pink-1;}
+}
+.img-1 {background: @bgd-dark;}
+.img-link {
+  display: block;
+  margin: 10px auto 0;
+}
+.show {display: block;}
+.margin-1 {margin-top: 13px;}
+.small-text, .input-1 {font-size: 0.9rem;}
+.small-text {
+  margin-left: 10px;
+  color: @color-info;
+  text-transform: uppercase;
+  vertical-align: middle;
+  &:link, &:visited {
+    color: @color-info;
+  }
+}
+// Video block
+.video-block {padding: 70px 0 25px;}
+.embed-responsive {
+  position: relative;
+  overflow: hidden;
+  height: 160px;
+}
+.embed-responsive iframe,
+.embed-responsive object,
+.embed-responsive embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  .size(100%);
+}
+.media-item {
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+.media-left, .media-body {
+  display: table-cell;
+  vertical-align: top;
+}
+.media-left {padding-right: 21px;
+  a {display: block;
+    overflow: hidden;
+    .size(110px);
+    background-color: @bgd-dark;
+  }
+}
+.media-body {overflow: hidden;
+  .title {margin: 0 0 7px;}
+  .link-1 {margin-top: 20px;}
+  > p {line-height: 17px;}
+}
+.overlay {
+  display: none;
+  background: #000;
+  opacity: 0.7;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  cursor: pointer;
+}
+.test {
+  margin-left: 0;
+}

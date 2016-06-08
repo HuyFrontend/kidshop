@@ -1,0 +1,24 @@
+mixin thumbnail(ObjThumb)
+  .thumb-item&attributes(attributes)
+      figure.img-wrap
+        +link(ObjThumb.title, ObjThumb.href, ObjThumb.text, ObjThumb.attr)
+          +img(ObjThumb.alt, ObjThumb.src)
+      .caption
+        h3.title.title-2
+          +link(ObjThumb.title, ObjThumb.href, ObjThumb.text, ObjThumb.attr)
+            !=ObjThumb.title
+        if block
+          block
+        else
+          p!=ObjThumb.desc
+
+mixin list-slider(ObjSlider)
+  ul&attributes(attributes)
+    - each item in ObjSlider
+      li(class=item.activeClass)
+        figure.img-wrap
+          +img(item.alt, item.src)
+        .caption
+          .desc!=item.desc
+          +link(item.text).btn-1.primary-btn
+

@@ -1,0 +1,24 @@
+extends layouts/layout
+
+block vars
+  -title = 'Subpage'
+  -bodyClass = 'subpage'
+  -menuIndex = 0
+
+block container
+  main(data-accordion)
+    .grid-fluid
+      .outer
+        - for(i=0; i<4; i++){
+          .block-1
+            h2.title: +link('Hvad er fri for mobberi', 'javascript:;')
+            .row.inner
+              .col-sm-8(data-hidden): .content
+                .sort-desc
+                  p Mobning er mest udbredt i 4.-7. klasse, men kimen lægges allerede i børnehaven. Derfor fokuserer antimobbeprogrammet Fri for Mobberi på de 3-8-årige.
+              .wrap.hidden
+                .col-sm-8: .content
+                  .editor-1
+                    p Mobning er mest udbredt i 4.-7. klasse, men kimen lægges allerede i børnehaven. Derfor fokuserer antimobbeprogrammet Fri for Mobberi på de 3-8-årige.
+              .col-sm-4: +link('Læs mere', 'javascript:;', 'Læs mere <i class="arrow"></i>').btn-1.viewmore-btn
+        - }

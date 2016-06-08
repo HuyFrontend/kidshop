@@ -1,0 +1,130 @@
+// Form
+input {
+  display: inline-block;
+  border: 0;
+  appearance: none;
+}
+.input-group {
+  overflow: hidden;
+  text-align: center;
+}
+.input-1 {
+  height: 37px;
+  line-height: 37px;
+  border-radius: 50px;
+}
+.send-btn {
+  padding: 0 25px;
+  background: @bg-info;
+  font-size: 1rem;
+}
+.text-input {
+  min-width: 110px;
+  padding: 0 10px;
+  color: @color-dark;
+  .placeholder-input(@color: @color, @padding-top: 0px, @font: 11px);
+}
+.form-1 {
+  position: relative;
+  margin-top: 20px;
+  text-align: center;
+  .send-btn {margin-left: 10px;}
+  .form-group {display: inline-block;}
+  .text-input {
+    line-height: 20px;
+    font-family: @font-family-base;
+  }
+}
+.subscribe-block {
+  overflow: hidden;
+  position: relative;
+  background-color: @bg-pink;
+  padding: 24px 0 32px;
+  text-align: center;
+  .inner {
+    display: block;
+    margin-top: 10px;
+    font-family: @font-gill-sans;
+  }
+  .label-1 {
+    color: @white;
+    text-transform: uppercase;
+    vertical-align: middle;
+  }
+}
+.primary-btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 45px;
+  border: 0;
+  background-color: @bg-blue;
+  text-align: center;
+  font-size: 1.2rem;
+  &:link, &:visited {color: @white;}
+}
+.viewmore-btn {
+  position: relative;
+  display: inline-block;
+  &:link, &:visited {color: @white;}
+  .arrow {
+    display: inline-block;
+    padding: 11px;
+    background-color: @light-blue;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 5px solid @light-blue;
+    border-radius: 50%;
+    .rotate(0deg);
+  }
+}
+/*login-form*/
+.user-login {
+  max-width: 400px;
+  margin: 50px auto;
+  .form-item {
+    label {
+      margin: 10px 0;
+      font-size: 1rem;
+    }
+    .description {
+      margin-top: 5px;
+      font-style: italic;
+    }
+  }
+  .form-actions {
+    margin-top: 20px;
+    text-align: right;
+  }
+}
+.input-2 {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid @grey;
+}
+
+//form-search
+.form-search {
+  display: none;
+  padding: 10px 20px 10px 14px;
+  background-color: @blue;
+  .form-group {overflow: hidden;}
+  input[type="text"] {
+    width: 100%;
+    height: 24px;
+    line-height: 24px;
+    font-size: 0.667em;
+    font-family: @font-family-base;
+  }
+  input[type="submit"] {
+    width: 57px;
+    height: 24px;
+    padding: 0 10px;
+    float: right;
+    line-height: 24px;
+    font-size: 0.833em;
+    background-color: #95d0e1;
+    &.active {background-color: #4f8392;}
+  }
+}

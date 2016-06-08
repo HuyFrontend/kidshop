@@ -1,0 +1,45 @@
+// Sprite
+.wi-icon {
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: center center;
+  direction: ltr;
+  text-indent: -9999px;
+}
+.arrow {
+  background-image: url(../images/icon-arrow.png);
+  background-size: 52px;
+}
+.arrow-left, .arrow-right {
+  .size(60px);
+  border-radius: 50%;
+}
+.arrow-left {
+  .rotate(90deg);
+  left: -10px;
+}
+.arrow-right {
+  .rotate(-90deg);
+  right: -10px; 
+}
+.icon-arrow {
+  display: inline-block;
+  .size(10px);
+  border-style: solid;
+  border-width: 2px 2px 0 0;
+  border-color: @color-text;
+  .rotate(45deg);
+}
+.logo-partner {
+  .size(101px, 35px);
+}
+.icon-close {
+  .size(32px);
+  background: url('../images/icon-close.png') no-repeat;
+  background-size: 100%;
+  position: absolute;
+  top: -16px;
+  right: -16px;
+  z-index: 10;
+}

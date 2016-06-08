@@ -1,0 +1,28 @@
+extends layouts/template
+
+block vars
+  -title = 'Style Guide'
+
+block container
+  h2 Thumbnail item
+  +thumbnail({title: 'Fakta om mobning', href: '#', text: '', src:'./images/upload/photo-2.jpg', alt:'photo-9', desc: 'Hvad er mobning? Hvor mange elever mobbes i Danmark? Se fakta om mobning her.'})
+  h2 Button
+  p (1) .primary-btn
+    +button('button', 'Læs mere', 'button-1').btn-1.primary-btn
+  h2 Form
+  p (1) .input-1
+    +input('text', 'email', '', 'email', {placeholder: 'Din e-mail adresse', class: 'input-1'})
+  br
+  br
+  p (2) .send-btn
+    +input('submit', 'send', 'Send').btn-1.send-btn
+  h2 Text
+  p (1) .title-1
+  h1.title-1 Hvad er fri for mobberi
+  h2 Link
+  p (1) .link-1
+  +link('Donec ipsum').link-1
+  p (2) .viewmore-btn
+    +link('Læs mere', 'javascript:;', 'Læs mere <i class="arrow"></i>').btn-1.viewmore-btn
+
+
