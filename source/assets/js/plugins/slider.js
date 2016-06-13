@@ -46,7 +46,7 @@
       that.vars.slider = preview.find('> ul');
       that.vars.sliderItem = that.vars.slider.find('> li');
       that.vars.numberItem = that.vars.sliderItem.length;
-      that.vars.itemWidth = win.width();
+      // that.vars.itemWidth = win.width();
       that.vars.sliderControlItem.eq(that.vars.activeIndex).addClass('active');
       that.vars.sliderPos = parseInt(that.vars.slider.css('margin-left'));
       that.vars.sliderItem.css('width', that.vars.itemWidth);
@@ -57,7 +57,7 @@
 
       that.vars.sliderItem.eq(0).css('zIndex', 1);
 
-      that.autoPlay();
+      // that.autoPlay();
 
       preview[0].addEventListener(eventStart, function(e){
         if(!that.vars.forceWait){
@@ -154,11 +154,11 @@
     },
 
     autoPlay: function(){
-      var that = this;  
+      var that = this;
       if(!that.vars.forWait){
         setInterval(function(){
           that.slideTo(that.vars.activeIndex + 1);
-        }, 5000);        
+        }, 5000);
       }
     },
 
@@ -179,7 +179,7 @@
           $(this).data('center-vertical').centerVertical();
         });
       }, 200);
-      
+
     },
     destroy: function() {
       $.removeData(this.element[0], pluginName);
