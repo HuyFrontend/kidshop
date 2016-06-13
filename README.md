@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 ## Demo Web
 - http://baboloo.si/
+=======
+## Demosite
+http://baboloo.si/
+>>>>>>> bac5e0e3e62aa70a2006581cbe8e52bcfab5cfc4
 
 ## Frontend template
   - Default HTML5/CSS3/JavaScript template
